@@ -52,7 +52,6 @@ export const SKILLS = [
       { name: "PostgreSQL", level: 75, icon: "🐘" },
       { name: "MongoDB", level: 75, icon: "🍃" },
       { name: "NestJS", level: 75, icon: "🪺⚙️" },
-      ,
     ],
   },
   {
@@ -93,7 +92,8 @@ export const PROJECTS = [
     image: "/projects/ecommerce.jpg",
     tech: ["React", "Node.js", "Stripe", "MongoDB"],
     liveUrl: "https://thrihard.netlify.app/",
-    sourceUrl: "https://github.com/Gajendrakmt9079/mern-stack-web-collection/tree/master/skincare/skincare/skincare-project",
+    sourceUrl:
+      "https://github.com/Gajendrakmt9079/mern-stack-web-collection/tree/master/skincare/skincare/skincare-project",
     featured: true,
   },
   {
@@ -114,7 +114,8 @@ export const PROJECTS = [
       "Drone delivery application with real-time inventory, payment integration, and admin dashboard.",
     image: "/projects/task-manager.jpg",
     tech: ["React", "Node.js", "MongoDB", "Socket.io", "Tailwind"],
-    liveUrl: "https://thedeadsec-dronehouse.netlify.app/https://tasks.example.com",
+    liveUrl:
+      "https://thedeadsec-dronehouse.netlify.app/https://tasks.example.com",
     sourceUrl: "https://github.com/Gajendrakmt9079/mern-stack-web-collection",
     featured: false,
   },
