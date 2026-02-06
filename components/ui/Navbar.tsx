@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${
         isScrolled
           ? "bg-dark-900/80 backdrop-blur-md border-b border-white/10 py-4"
           : "bg-transparent py-6"
@@ -49,11 +49,12 @@ export default function Navbar() {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link
           href="/"
-          className="text-2xl font-bold bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent"
+          className="text-2xl font-bold bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent relative z-[102]"
         >
           G / K
         </Link>
 
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
@@ -80,8 +81,9 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white z-50 relative"
+          className="md:hidden text-white z-[102] relative p-2 focus:outline-none"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
             <svg
@@ -90,7 +92,7 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-8 h-8"
             >
               <path
                 strokeLinecap="round"
@@ -105,7 +107,7 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-8 h-8"
             >
               <path
                 strokeLinecap="round"
@@ -119,7 +121,7 @@ export default function Navbar() {
         {/* Mobile Menu Overlay */}
         <div
           ref={mobileMenuRef}
-          className={`fixed inset-0 bg-dark-900/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-8 md:hidden transition-transform duration-500 ease-in-out ${
+          className={`fixed inset-0 top-70 bg-dark-900/98 backdrop-blur-xl z-[100] flex flex-col items-center justify-center gap-8 md:hidden transition-transform duration-500 ease-in-out ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -128,7 +130,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-2xl font-bold text-white hover:text-neon-blue transition-colors"
+              className="text-3xl font-bold text-white hover:text-neon-blue transition-colors"
             >
               {link.name}
             </Link>
@@ -137,7 +139,7 @@ export default function Navbar() {
             href="/gajendra_resume-2026.pdf"
             download="Gajendra_Kumawat_Resume.pdf"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="text-2xl font-bold text-neon-blue hover:text-white transition-colors border-2 border-neon-blue px-8 py-2 rounded-full"
+            className="text-xl font-bold  bg-white text-black hover:bg-neon-blue hover:text-white transition-colors px-8 py-3 rounded-full mt-4 shadow-neon-sm"
           >
             Resume
           </a>

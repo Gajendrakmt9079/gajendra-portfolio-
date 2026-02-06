@@ -58,14 +58,14 @@ export default function Hero() {
       <div className="relative z-10 text-center px-6">
         <h1
           ref={nameRef}
-          className="text-6xl md:text-8xl lg:text-9xl font-bold mb-4 bg-gradient-to-r from-white via-neon-blue to-neon-purple bg-clip-text text-transparent"
+          className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-4 bg-gradient-to-r from-white via-neon-blue to-neon-purple bg-clip-text text-transparent"
         >
           {PERSONAL_INFO.name}
         </h1>
 
         <h2
           ref={roleRef}
-          className="text-2xl md:text-3xl lg:text-4xl font-mono text-gray-300 mb-8"
+          className="text-xl md:text-3xl lg:text-4xl font-mono text-gray-300 mb-8"
         >
           {PERSONAL_INFO.role}
         </h2>
